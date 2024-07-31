@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Controllers;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers
+namespace API
 {
-    [ApiController]
-    [Route("api/[controller]")] //api/users
-    public class UsersController(DataContext context) : ControllerBase
+   
+    public class UsersController(DataContext context) : BaseApiController
     {
 
         [HttpGet]
